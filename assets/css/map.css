@@ -1,0 +1,104 @@
+/*FUENTES*/
+@font-face{
+    font-family:'anton';
+    src:url('../rsc/fonts/anton.ttf') format('truetype');
+}
+@font-face{
+    font-family:'kanitRegular';
+    src:url('../rsc/fonts/Kanit-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family:'kanitSemi';
+    src:url('../rsc/fonts/Kanit-Semibold.ttf') format('truetype');
+}
+
+/* Required height of parents of the Full Page Intro and Intro itself */
+body{
+    margin: 0;
+    padding: 0;
+}
+#map{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+.leaflet-control-layers{
+    width: 100% !important;
+}
+
+.leaflet-touch .leaflet-control-layers{
+    border: 0px !important;
+}
+.leaflet-control-layers-selector{
+    position:relative !important;
+    opacity: 1 !important;
+}
+
+}
+.leaflet-popup-close-button{
+    color: #1b1b1b !important;
+}
+.leaflet-popup-content-wrapper{
+    background-color:rgba(173,212,247,0.9);
+    color: #1b1b1b;
+}
+.leaflet-popup-tip{
+    background-color:rgba(173,212,247,0.9);
+}
+.tituloPeña{
+    font-family: 'anton';
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+.direccionPeña{
+    font-family: 'kanitRegular';
+    letter-spacing: 0px;
+    font-size: 14px;
+}
+.tituloMunicipio{
+    font-family: 'kanitRegular';
+    letter-spacing: 0px;
+    font-size: 14px;
+}
+.botoncito{
+    background: #ededed !important;
+    color: #1b1b1b !important;
+    box-shadow: 0 0px 10px 0 #1b1b1b;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    margin-top: 10px;
+}
+.icono{
+    color: #1b1b1b !important;
+    width: 52px;
+    height: 45px;
+    font-size: 30px;
+    flex: center;
+    padding-top: 7px;
+}
+
+/*RESPONSIVE*/
+
+/*MÓVIL*/
+@media screen and (max-width: 480px){
+    .tituloPeña{
+        font-family: 'anton';
+        letter-spacing: 0.5px;
+        font-size: 14px;
+    }
+    .direccionPeña{
+        font-family: 'kanitRegular';
+        letter-spacing: 0px;
+        font-size: 14px;
+    }
+    .tituloMunicipio{
+        font-family: 'kanitRegular';
+        letter-spacing: 0px;
+        font-size: 14px;
+    }
+}
