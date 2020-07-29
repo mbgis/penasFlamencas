@@ -38,7 +38,7 @@ var cartoNegro = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}
 var icono = L.icon({
     iconUrl: 'assets/css/images/marker.png',
     iconSize: [32, 32],
-    iconAnchor:   [15, 45], // point of the icon which will correspond to marker's location
+    iconAnchor:   [15, 45],
     popupAnchor:  [0, -46]
 });
 /*		CREACIÓN DE ICONO		*/
@@ -82,7 +82,8 @@ var overlayMaps = null ;
 
 L.control.layers(baseMaps, overlayMaps,{
 	position: 'topright',
-	collapsed: true
+	collapsed: true,
+	hideSingleBase: true
 }).addTo(map);
 /*	REALIZA UN CONTROLADOR DE CAPAS	*/
 
@@ -91,7 +92,13 @@ L.control.layers(baseMaps, overlayMaps,{
 function popup(feature, layer) { 
 	if (feature.properties && feature.properties.nombre) 
 	{ 
-		layer.bindPopup( "<span class='tituloPeña'>" + feature.properties.nombre + "</span><br/><span class='tituloMunicipio'>" + feature.properties.municipio + "</span><br/><span class='direccionPeña'>"+ feature.properties.direcci_n +"</span><br/><div class='flex-center'><a class='botoncito btn-floating btn-sm btn-default' href=" +feature.properties.url+" target='_blank'><i class='icono fas fa-map-marked-alt'></i></a></div>"); 
+		layer.bindPopup( "<span class='tituloPeña'>" + feature.properties.nombre + "</span></br><span class='tituloMunicipio'>(" + feature.properties.municipio + ")</span></br><div class='flex-center'><a class='botoncito btn-floating btn-sm btn-default' href=" +feature.properties.url+" target='_blank'><i class='icono fas fa-map-marked-alt'></i></a></div>"); 
 	} 
 }
+
 /*	APLICAR EL POP UP	*/
+function moveToLocation(latlng, title, map) {
+	//map.fitBounds( latlng.layer.getBounds() );
+	var zoom = map.getBoundsZoom(latlng.layer.getBounds());
+	map.setView(latlng, zoom); // access the zoom
+	}

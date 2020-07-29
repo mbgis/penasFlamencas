@@ -35,7 +35,6 @@ body{
     opacity: 1 !important;
 }
 
-}
 .leaflet-popup-close-button{
     color: #1b1b1b !important;
 }
@@ -91,14 +90,14 @@ body{
         letter-spacing: 0.5px;
         font-size: 14px;
     }
-    .direccionPeña{
-        font-family: 'kanitRegular';
-        letter-spacing: 0px;
-        font-size: 14px;
-    }
     .tituloMunicipio{
         font-family: 'kanitRegular';
         letter-spacing: 0px;
         font-size: 14px;
+    }
+    .icono{
+        width: 45px;
+        height: 38px;
+        font-size: 25px;
     }
 }
