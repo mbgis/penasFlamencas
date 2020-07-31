@@ -95,10 +95,4 @@ function popup(feature, layer) {
 		layer.bindPopup( "<span class='tituloPeña'>" + feature.properties.nombre + "</span></br><span class='tituloMunicipio'>(" + feature.properties.municipio + ")</span></br><div class='flex-center'><a class='botoncito btn-floating btn-sm btn-default' href=" +feature.properties.url+" target='_blank'><i class='icono fas fa-map-marked-alt'></i></a></div>"); 
 	} 
 }
-
 /*	APLICAR EL POP UP	*/
-function moveToLocation(latlng, title, map) {
-	//map.fitBounds( latlng.layer.getBounds() );
-	var zoom = map.getBoundsZoom(latlng.layer.getBounds());
-	map.setView(latlng, zoom); // access the zoom
-	}

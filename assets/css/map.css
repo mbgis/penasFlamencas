@@ -1,4 +1,4 @@
-/*FUENTES*/
+/*      FUENTES     */
 @font-face{
     font-family:'anton';
     src:url('../rsc/fonts/anton.ttf') format('truetype');
@@ -12,7 +12,7 @@
     src:url('../rsc/fonts/Kanit-Semibold.ttf') format('truetype');
 }
 
-/* Required height of parents of the Full Page Intro and Intro itself */
+/*      CSS         */
 body{
     margin: 0;
     padding: 0;
@@ -74,9 +74,9 @@ body{
 }
 .icono{
     color: #1b1b1b !important;
-    width: 52px;
-    height: 45px;
-    font-size: 30px;
+    width: 48px;
+    height: 41px;
+    font-size: 27px;
     flex: center;
     padding-top: 7px;
 }
